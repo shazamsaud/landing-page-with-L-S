@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import { BrowserRouter , Route , Routes } from 'react-router-dom'
 import './App.css'
-import Header from '../src/Components/Header.js'
-import Sidebar from '../src/Components/SideBar.js'
-import Home from '../src/Components/Home.js'
-import Profile from './Components/Profile.js'
+import TeacherHeader from './Components/teacher/TeacherHeader.js'
+import TeacherSidebar from './Components/teacher/TeacherSidebar.js'
+import TeacherProfile from "./Components/teacher/TeacherProfile.js"
+import TeacherSubjects from "./Components/teacher/TeacherSubjects.js"
 
-import StudentSubjects from './Components/StudentSubjects.js'
+import StudentHeader from "./Components/student/StudentHeader.js"
+import StudentProfile from "./Components/student/StudentProfile.js"
+import StudentSidebar from "./Components/student/StudentSidebar.js"
+import StudentSubjects from "./Components/student/StudentSubjects.js"
+import Signup from './Components/Signup.js'
+import Login from "./Components/Login.js"
 
 
 function App() {
@@ -19,14 +24,21 @@ function App() {
 
   return (
     <div className='grid-container'>
-      <Header OpenSidebar={OpenSidebar}/>
-      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+      <TeacherHeader OpenSidebar={OpenSidebar}/>
+      <TeacherSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
+
+      <StudentHeader OpenSidebar={OpenSidebar}/>
+      <StudentSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
       <BrowserRouter>
       <Routes>
-    
-      <Route exact path='/' element={<Home/>}/>
-      <Route path='/profile' element={<Profile/>}/>
-      <Route path='/courses' element={<StudentSubjects/>}/>
+          <Route exact path='/StudentProfile' element={<StudentProfile/>}/>
+      <Route exact path='/StudentCourses' element={<StudentSubjects/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/login' element={<Login/>}/>
+   
+
+      <Route path='/TeacherProfile' element={<TeacherProfile/>}/>
+      <Route path='/Teachercourses' element={<TeacherSubjects/>}/> 
       </Routes>
       
       </BrowserRouter>
@@ -36,3 +48,62 @@ function App() {
 }
 
 export default App
+
+
+// import { useState } from 'react'
+// import { BrowserRouter , Route , Routes } from 'react-router-dom'
+// import './App.css'
+
+// import TeacherProfile from "../src/Components/teacher/TeacherProfile.js"
+// import TeacherSubjects from "../src/Components/teacher/TeacherSubjects.js"
+// import StudentProfile from "../src/Components/student/StudentProfile.js"
+
+// import StudentSubjects from "../src/Components/student/StudentSubjects.js"
+// import Signup from './Components/Signup.js'
+// import Login from "./Components/Login.js"
+// import Dashboard from './Components/Dashboard.js'
+
+
+// function App() {
+  
+ 
+
+//   return (
+//     <>
+    
+   
+
+     
+
+     
+// <BrowserRouter>
+// <Routes>
+//   <Route path='/' element={<Signup/>}/>
+//   <Route path='/Dashboard' element={<Dashboard/>}/>
+//     <Route exact path='/StudentProfile' element={<StudentProfile/>}/>
+// <Route exact path='/StudentCourses' element={<StudentSubjects/>}/>
+// <Route path='/signup' element={<Signup/>}/>
+// <Route path='/login' element={<Login/>}/>
+
+
+// <Route path='/TeacherProfile' element={<TeacherProfile/>}/>
+// <Route path='/Teachercourses' element={<TeacherSubjects/>}/> 
+// </Routes>
+
+// </BrowserRouter>
+
+
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+

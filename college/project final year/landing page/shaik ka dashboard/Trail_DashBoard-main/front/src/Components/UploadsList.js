@@ -1,4 +1,5 @@
 import React from "react";
+import "./StudentTeacherSubjects.css";
 import { BACKEND_URI } from "../config/constants";
 import {   Card,CardContent,Box, Typography } from '@mui/material'
 import axios from "axios";
@@ -23,12 +24,12 @@ import axios from "axios";
 
 
   return (
-    <>
-        <Box width={"300%"}  margin={"auto"} marginTop={4}>
-      <Typography margin={"auto"} varient="h4" padding={2} textAlign={"center"} width={"40%"} bgcolor={"#900C3F"} color={"white"}>All videos</Typography>
+    <div >
+        <Box width={"100%"}  margin={"auto"} marginTop={4}>
+      <Typography margin={"auto"}  marginTop={5} varient="h4" padding={2} textAlign={"center"} width={"40%"} bgcolor={"#900C3F"} color={"white"}>All videos</Typography>
       </Box>
       <Box 
-      width={"300%"} 
+      width={"120%"} 
     
       marginTop={5}
       // margin={"auto"}
@@ -78,7 +79,7 @@ import axios from "axios";
 
       </Box>
 
-    </>
+    </div>
   );
 };
 

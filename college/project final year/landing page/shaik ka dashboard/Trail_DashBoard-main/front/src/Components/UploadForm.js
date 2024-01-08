@@ -32,6 +32,7 @@ const UploadForm = ({ getAllMedias }) => {
     <>
       <form onSubmit={hadleSubmit}>
         <div className="form-group">
+          <h1>Upload</h1>
           <label htmlFor="name">Name</label>
           <input
             type="text"
